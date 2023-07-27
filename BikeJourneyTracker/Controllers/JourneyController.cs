@@ -10,7 +10,8 @@ namespace BikeJourneyTracker.Controllers
     {
         private readonly TrackerDbContext _trackerDbContext;
 
-        public JourneyController(TrackerDbContext dbContext) { 
+        public JourneyController(TrackerDbContext dbContext)
+        {
             this._trackerDbContext = dbContext;
         }
 
@@ -37,5 +38,10 @@ namespace BikeJourneyTracker.Controllers
             return Ok(response);
         }
 
+
+
+       
     }
+
 }
+//https://localhost:7182/api/Journey?pageSize=10&pageNumber=1

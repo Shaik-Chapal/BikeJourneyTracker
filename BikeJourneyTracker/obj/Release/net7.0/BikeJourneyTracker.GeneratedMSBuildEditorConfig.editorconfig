@@ -1,0 +1,17 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BikeJourneyTracker
+build_property.RootNamespace = BikeJourneyTracker
+build_property.ProjectDir = G:\asp.et\New folder\BikeJourneyTracker\BikeJourneyTracker\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\asp.et\New folder\BikeJourneyTracker\BikeJourneyTracker
+build_property._RazorSourceGeneratorDebug = 
