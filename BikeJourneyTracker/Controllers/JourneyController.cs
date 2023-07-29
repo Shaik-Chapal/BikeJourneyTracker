@@ -39,8 +39,33 @@ namespace BikeJourneyTracker.Controllers
         }
 
 
+        //[HttpGet("stations")]
+        //public async Task<IActionResult> GetStations(int pageSize = 10, int pageNumber = 1)
+        //{
+        //    var totalItems = await _trackerDbContext.Stations.CountAsync();
+        //    var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-       
+        //    var stations = await _trackerDbContext.Stations
+        //        .Skip((pageNumber - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .ToListAsync();
+
+        //    var response = new
+        //    {
+        //        TotalItems = totalItems,
+        //        TotalPages = totalPages,
+        //        PageNumber = pageNumber,
+        //        PageSize = pageSize,
+        //        Stations = stations
+        //    };
+
+        //    return Ok(response);
+        //}
+
+
+
+
+
     }
 
 }
