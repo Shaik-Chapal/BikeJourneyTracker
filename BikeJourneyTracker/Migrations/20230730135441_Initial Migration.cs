@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BikeJourneyTracker.Migrations
 {
     /// <inheritdoc />
-    public partial class ttt : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,6 @@ namespace BikeJourneyTracker.Migrations
                 name: "Journeys",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false),
                     Departure = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Return = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DepartureStationId = table.Column<int>(type: "int", nullable: false),

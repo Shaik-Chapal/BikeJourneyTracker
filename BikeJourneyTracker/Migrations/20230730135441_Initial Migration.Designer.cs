@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BikeJourneyTracker.Migrations
 {
     [DbContext(typeof(TrackerDbContext))]
-    [Migration("20230729162116_ttt")]
-    partial class ttt
+    [Migration("20230730135441_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,9 +41,6 @@ namespace BikeJourneyTracker.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DurationSec")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Return")

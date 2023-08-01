@@ -40,9 +40,6 @@ namespace BikeJourneyTracker.Migrations
                     b.Property<int>("DurationSec")
                         .HasColumnType("int");
 
-                    b.Property<int>("ID")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Return")
                         .HasColumnType("datetime2");
 
