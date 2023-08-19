@@ -125,6 +125,35 @@ namespace BikeJourneyTracker.Controllers
 
             return Ok(matchingStations);
         }
+        [HttpGet("JourneySearch")]
+        public async Task<IActionResult> GetJourneysS(string query = "", int pageNumber = 1, int pageSize = 10)
+        {
+            IQueryable<Journey> queryableJourneys = _trackerDbContext.Journeys;
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                queryableJourneys = queryableJourneys.Where(s => s.DepartureStationName.StartsWith(query));
+            }
+
+            var totalItems = await queryableJourneys.CountAsync();
+            var totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+            var journeys = await queryableJourneys
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var response = new
+            {
+                TotalItems = totalItems,
+                TotalPages = totalPages,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                Journeys = journeys
+            };
+
+            return Ok(response);
+        }
 
         [HttpGet("search")]
         public async Task<IActionResult> SearchStations(string query, int pageNumber = 1, int pageSize = 10)
